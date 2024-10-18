@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+
+{% block title %}contact{% endblock %}
+
+{% block content %}
+
+<head>
+
+<title>contact us</title>
+<style>
+
+    body{
+        background-image: url('static/images/beach2.jpg') ;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+
+
+    .navbar-red {
+        background-color: orange;
+    }
+
+    .form-center {
+        display: flex;
+        justify-content: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+
+    }
+
+    .transbox {
+        margin: 100px;
+        border: 1px solid black;
+        opacity: 0.6;
+        padding: 20px 20px 20px 20px;
+        border-radius: 30px;
+    }
+
+    #bot {
+        font-weight: bold;
+        color: #000000;
+    }
+    ::-webkit-scrollbar {
+      width: 20px;
+      background-image: url(xg49wiai.png);
+      background-size: 100px 100000px;
+      background-repeat: no-repeat;
+    }
+
+
+
+    ::-webkit-scrollbar-thumb { 
+        background-image: url(tq1utsv9-removebg-preview.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        object-fit: contain;
+    }
+</style>
+</head>
+
+
+<body >
+    
+
+    <div>
+        <div class="form-center">
+            <form class="transbox">
+                <p>
+                    <p style="font-weight: bold;">For any query fill below form our </p>
+                    <p style="font-weight: bold;">executive will contact you soon </p>
+                    
+                    <label style="font-weight: bold;opacity: 5;" id="bot">Email:</label><br>
+                    <input type="email" name="email" placeholder="Email" id="bot"><br><br>
+                    <label id="bot">Contact no.:</label><br>
+                    <input type="number" name="contact number" placeholder="contact number" id="bot"><br><br>
+                    <label id="bot">Query :</label><br>
+                    <textarea class="bot" type="text" name="Query" placeholder="Query" rows="3"
+                        style="width: 220px;"></textarea><br><br>
+                    <button type="submit" class="btn btn-primary" id="bot" style="background-color: darkgreen;border-radius: 20px;">Submit</button><br><br>
+
+                    <p>Contact no. : 6865464652</p>
+                    <p>Contact email :rrmotors@gmail.com</p>
+
+                </p>
+            </form>
+        </div>
+    </div>
+
+
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+</body>
+
+{% endblock %}

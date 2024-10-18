@@ -1,0 +1,121 @@
+{% extends 'base.html' %}
+
+{% block title %}login{% endblock %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <style>
+        .box {
+            position: relative;
+            animation-name: example;
+            animation-duration: 6s;
+            animation-fill-mode: forwards;
+            width: 1000px;
+            margin: 0 auto; 
+        }
+
+        .img {
+            vertical-align: bottom;
+            width: 300px;
+            height: 200px;
+            position: relative;
+            animation-name: new;
+            animation-duration: 3s;
+            animation-delay: 6s;
+            transform: scaleX(-1);
+            animation-fill-mode: forwards;
+            display: inline-block;
+
+        }
+
+        .form {
+            display: inline-block;
+            vertical-align: bottom;
+            padding: 10px 50px 10px 50px;
+            background-color:
+                white;
+            width: 300px;
+            border-radius: 30px;
+        }
+
+
+        #lab {
+            color: black;
+        }
+
+
+        @keyframes example {
+            0% {
+                right: -800px;
+            }
+
+            100% {
+                right: 200px;
+                transform: translateX(50%);
+            }
+        }
+
+        @keyframes new {
+            0% {
+                right: 500px;
+            }
+
+            80% {
+                right: 1800px;
+            }
+
+            100% {
+                opacity: 0;
+            }
+
+        }
+    </style>
+
+</head>
+
+<div>
+    <div class="box">
+
+        
+        
+
+        
+        <form action="{{url_for('login')}}" method="post" class="form" style="padding: 10px 50px 10px 50px;background-color: white;width: 500px;border-radius: 30px;">
+
+            <h1>Login</h1>
+                    <!--email input-->
+                    <div data-mdb-input-init class="form-outline mb-4">
+                        <input type="email" id="email" name="email" class="form-control"/>
+                        <label class="form-label" for="email">email address</label>
+
+                    </div>
+                    <!--password input-->
+                    <div data-mdb-input-init class="form-outline mb-4">
+                        <input type="password" id="password" name="password" class="form-control"/>
+                        <label class="form-label" for="password">password</label>
+
+                    </div>
+
+                    <!--submit button-->
+
+                    <button type="submit" class="btn btn-primary btn-block">sign in</button>
+
+                    <!--register link-->
+
+                    <p>Don't have an account? <a href="{{url_for('register')}}">Register here</a></p>
+                
+                </form>
+
+                <img src="{{ url_for('static', filename='images/new.gif')}}" class="img">
+
+
+    </div>
+</div>
+</html>
+
+{% endblock %}

@@ -1,0 +1,39 @@
+<!--blogs.html-->
+
+{% extends 'base.html' %}
+
+{% block title %}Blogs{% endblock %}
+
+{% block content %}
+    <!-- blogs.html -->
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car service</title>
+</head>
+<body>
+    <center>
+        <h2>Blog Form</h2>
+    <form action="{{ url_for('blogs') }}" method="post" style="border: 1px solid black; padding: 20px 20px 20px 20px;
+    border-radius: 30px;">
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br>
+        <label for="mobile">Mobile Number:</label><br>
+        <input type="text" id="mobile" name="mobile" required><br>
+        <label for="problem">Problem in Car:</label><br>
+        <textarea id="problem" name="problem" rows="4" required></textarea><br>
+        <label for="car_model">Car Model:</label><br>
+        <input type="text" id="car_model" name="car_model" required><br>
+        <label for="address">Address:</label><br>
+        <textarea id="address" name="address" rows="4" required></textarea><br>
+        <input type="submit" value="Submit">
+    </form>
+</center>
+</body>
+</html>
+
+
+
+{% endblock %}
